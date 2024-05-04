@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Fonts Connection -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Smythe Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <!-- Inter Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="index.css">
+        <title>Ordering app</title>
+    </head>
+    <body>
+        <header>
+            <img class="header-background" src="https://s3-alpha-sig.figma.com/img/8453/64ec/acaeaea44c5e3a8cd7159c5d52f26662?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ikCuyiMWzN8hwdrUVPBHW4Ap0ozkMSOHcDKUTLcdYzy~INuw4UTDe73Af4Qmm36WD3dj13FutjCczb0gXIrBnihRQew1RLYEfCCVZUC7kznfVM0RHE96gJ9fXvs0I-8WBb6C4XXJfec8cfpr8ZYeyJoi-M7UXZBCha-oTvhVdgbCkKs-xbo-mti0Isr3vC0D0crpHuEQjKUfs~0pfLMxM6pdkio3UjKeJ3TrkR5kPhBbYCPquM~HJ8vf6F91QGGNtGgfZYX18YxA4L3per-YrwvkNEztoLecpSGfQIq2ZJAfxXAGkV8Y~otfjiVQchdewXw0spe3qhrzqeXW-q4fWA__"/ alt="A burguer on a table, the burguer is so close that you can appreciate their ingredients: fresh lettuce slices, onion rings, a whole fried egg, a slice of cheddar and a delicius burguer below, all of that contained by two smushy brown buns">
+            <h1>Mako's Dinner</h1>
+            <p class="subtitle">The best burguers and pizzas in town</p>
+        </header>
+        <main>
+            <section>
+                <ul id="food-list" class="food-list">
+                </ul>
+            </section>                
+            <section id="order-bill-section" class="hidden">
+                <h2 class="centered">Your order</h2>
+                <div id="order-bill">
+                    <ul id="bill-list" class="bill-list">
+                    </ul>
+                    <div class="bill-total-section">
+                        <p>Total price:</p>
+                        <p id="bill-total" class="to-right price"></p>
+                    </div>
+                </div>
+                <button class="submit-button complete-button" data-action='complete-order'>Complete order</button>
+            </section>
+            <div id="payment-window" class="payment-window hidden" data-action="close-payment">
+              <form id="payment-form" class="payment-form">
+                <h2 class="payment-form-title">Enter card details</h2>
+                <input id="name-input" name="name" type="text" placeholder="Enter your name" required/>
+                <input id="card-number-input" name="card-number" type="number" placeholder="Enter card number" required/>
+                <input id="cvv-input" name="cvv" type="number" placeholder="Enter CVV" required/>
+                <button class="submit-button pay-button" type="submit">Pay</button>
+              </form>
+            </div>
+            
+        </main>
+	    <script src="index.js" type="module"></script>
+    </body>
+</html>
+
